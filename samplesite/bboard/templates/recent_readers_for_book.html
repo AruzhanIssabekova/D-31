@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Readers of {{ book.title }}</title>
+</head>
+<body>
+    <h1>Recent Readers of {{ book.title }}</h1>
+    <ul>
+        {% for reading in recent_readers %}
+            <li>{{ reading.reader.name }} started reading on {{ reading.start_date }}</li>
+        {% empty %}
+            <li>No recent readers found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Readers of {{ book.title }}</title>
+</head>
+<body>
+    <h1>Readers of {{ book.title }}</h1>
+    <ul>
+        {% for reader in readers %}
+            <li>{{ reader.name }}</li>
+        {% empty %}
+            <li>No readers found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
